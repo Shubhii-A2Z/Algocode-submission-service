@@ -15,6 +15,7 @@
     "bullmq": "^5.66.5",
     "fastify": "^5.7.1",
     "fastify-plugin": "^5.1.0",
+    "http-status-codes": "^2.3.0",
     "ioredis": "^5.9.2",
     "mongoose": "^9.1.5"
   }

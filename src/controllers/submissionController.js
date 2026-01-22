@@ -1,3 +1,4 @@
+const { StatusCodes } = require("http-status-codes");
 const pingCheck = require("../services/submissionService");
 
 async function pingRequest(req,resp){
@@ -8,6 +9,12 @@ async function pingRequest(req,resp){
 
 async function createSubmission(req,resp){
     const response=this.submissionService.addSubmission(req.body);
+    return resp.status(StatusCodes.CREATED).send({
+        error: {},
+        data: response,
+        success: true,
+        message: 'Created Submission Successfully'
+    });
 } 
 
 module.exports={
